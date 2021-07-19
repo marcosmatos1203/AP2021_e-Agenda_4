@@ -49,9 +49,11 @@ namespace eAgenda.Forms.CompromissoModule
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.stsCompromisso = new System.Windows.Forms.ToolStripStatusLabel();
             this.gbxLista.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbxConfiguracoes.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxLista
@@ -269,12 +271,19 @@ namespace eAgenda.Forms.CompromissoModule
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stsCompromisso});
             this.statusStrip1.Location = new System.Drawing.Point(0, 427);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
             this.statusStrip1.Size = new System.Drawing.Size(586, 22);
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // stsCompromisso
+            // 
+            this.stsCompromisso.Name = "stsCompromisso";
+            this.stsCompromisso.Size = new System.Drawing.Size(0, 17);
             // 
             // AtualizarCompromisso
             // 
@@ -294,6 +303,8 @@ namespace eAgenda.Forms.CompromissoModule
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbxConfiguracoes.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -321,5 +332,6 @@ namespace eAgenda.Forms.CompromissoModule
         private System.Windows.Forms.TextBox txtLocal;
         private System.Windows.Forms.MaskedTextBox mtbHoraFim;
         private System.Windows.Forms.MaskedTextBox mtbHoraInicio;
+        private System.Windows.Forms.ToolStripStatusLabel stsCompromisso;
     }
 }

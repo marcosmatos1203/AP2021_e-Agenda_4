@@ -86,6 +86,7 @@ namespace eAgenda.Forms
             controladorCompromisso.Excluir(compromisso.Id);
             dtsCompromisso.Clear();
             CarregarCompromissosFuturos();
+            stsCompromisso.Text = "Compromisso excluído";
         }
 
         private void btnTodos_Click(object sender, EventArgs e)
@@ -98,6 +99,11 @@ namespace eAgenda.Forms
         private void btnProximos_Click(object sender, EventArgs e)
         {
             CarregarCompromissosFuturos();
+        }
+
+        private void btnConfiguracao_Click(object sender, EventArgs e)
+        {
+            stsCompromisso.Text = "Em construção, Aguardem...";
         }
     }
 }

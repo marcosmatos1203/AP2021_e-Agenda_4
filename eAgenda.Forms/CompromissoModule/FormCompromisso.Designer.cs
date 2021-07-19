@@ -30,7 +30,14 @@ namespace eAgenda.Forms
         private void InitializeComponent()
         {
             this.gbxLista = new System.Windows.Forms.GroupBox();
+            this.btnTodos = new System.Windows.Forms.Button();
             this.dgvCompromisso = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.assuntoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.horaTerminoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtsCompromisso = new System.Data.DataSet();
             this.tbCompromisso = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
@@ -48,18 +55,13 @@ namespace eAgenda.Forms
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.btnTodos = new System.Windows.Forms.Button();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.assuntoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaInicioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.horaTerminoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contatoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.stsCompromisso = new System.Windows.Forms.ToolStripStatusLabel();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCompromisso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtsCompromisso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCompromisso)).BeginInit();
             this.gbxConfiguracoes.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxLista
@@ -76,6 +78,17 @@ namespace eAgenda.Forms
             this.gbxLista.TabIndex = 7;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Listas de Compromissos";
+            // 
+            // btnTodos
+            // 
+            this.btnTodos.Location = new System.Drawing.Point(29, 288);
+            this.btnTodos.Margin = new System.Windows.Forms.Padding(2);
+            this.btnTodos.Name = "btnTodos";
+            this.btnTodos.Size = new System.Drawing.Size(148, 34);
+            this.btnTodos.TabIndex = 10;
+            this.btnTodos.Text = "Todos";
+            this.btnTodos.UseVisualStyleBackColor = true;
+            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
             // 
             // dgvCompromisso
             // 
@@ -97,6 +110,53 @@ namespace eAgenda.Forms
             this.dgvCompromisso.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCompromisso.Size = new System.Drawing.Size(494, 237);
             this.dgvCompromisso.TabIndex = 9;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 40;
+            // 
+            // assuntoDataGridViewTextBoxColumn
+            // 
+            this.assuntoDataGridViewTextBoxColumn.DataPropertyName = "Assunto";
+            this.assuntoDataGridViewTextBoxColumn.HeaderText = "Assunto";
+            this.assuntoDataGridViewTextBoxColumn.Name = "assuntoDataGridViewTextBoxColumn";
+            this.assuntoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.assuntoDataGridViewTextBoxColumn.Width = 130;
+            // 
+            // dataDataGridViewTextBoxColumn
+            // 
+            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
+            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
+            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
+            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataDataGridViewTextBoxColumn.Width = 80;
+            // 
+            // horaInicioDataGridViewTextBoxColumn
+            // 
+            this.horaInicioDataGridViewTextBoxColumn.DataPropertyName = "HoraInicio";
+            this.horaInicioDataGridViewTextBoxColumn.HeaderText = "HoraInicio";
+            this.horaInicioDataGridViewTextBoxColumn.Name = "horaInicioDataGridViewTextBoxColumn";
+            this.horaInicioDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horaInicioDataGridViewTextBoxColumn.Width = 65;
+            // 
+            // horaTerminoDataGridViewTextBoxColumn
+            // 
+            this.horaTerminoDataGridViewTextBoxColumn.DataPropertyName = "HoraTermino";
+            this.horaTerminoDataGridViewTextBoxColumn.HeaderText = "HoraTermino";
+            this.horaTerminoDataGridViewTextBoxColumn.Name = "horaTerminoDataGridViewTextBoxColumn";
+            this.horaTerminoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.horaTerminoDataGridViewTextBoxColumn.Width = 75;
+            // 
+            // contatoDataGridViewTextBoxColumn
+            // 
+            this.contatoDataGridViewTextBoxColumn.DataPropertyName = "Contato";
+            this.contatoDataGridViewTextBoxColumn.HeaderText = "Contato";
+            this.contatoDataGridViewTextBoxColumn.Name = "contatoDataGridViewTextBoxColumn";
+            this.contatoDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // dtsCompromisso
             // 
@@ -188,6 +248,7 @@ namespace eAgenda.Forms
             this.btnConfiguracao.TabIndex = 4;
             this.btnConfiguracao.Text = "Configurações";
             this.btnConfiguracao.UseVisualStyleBackColor = true;
+            this.btnConfiguracao.Click += new System.EventHandler(this.btnConfiguracao_Click);
             // 
             // btnCancelar
             // 
@@ -236,6 +297,8 @@ namespace eAgenda.Forms
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stsCompromisso});
             this.statusStrip1.Location = new System.Drawing.Point(0, 427);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
@@ -243,63 +306,10 @@ namespace eAgenda.Forms
             this.statusStrip1.TabIndex = 8;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // btnTodos
+            // stsCompromisso
             // 
-            this.btnTodos.Location = new System.Drawing.Point(29, 288);
-            this.btnTodos.Margin = new System.Windows.Forms.Padding(2);
-            this.btnTodos.Name = "btnTodos";
-            this.btnTodos.Size = new System.Drawing.Size(148, 34);
-            this.btnTodos.TabIndex = 10;
-            this.btnTodos.Text = "Todos";
-            this.btnTodos.UseVisualStyleBackColor = true;
-            this.btnTodos.Click += new System.EventHandler(this.btnTodos_Click);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 40;
-            // 
-            // assuntoDataGridViewTextBoxColumn
-            // 
-            this.assuntoDataGridViewTextBoxColumn.DataPropertyName = "Assunto";
-            this.assuntoDataGridViewTextBoxColumn.HeaderText = "Assunto";
-            this.assuntoDataGridViewTextBoxColumn.Name = "assuntoDataGridViewTextBoxColumn";
-            this.assuntoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.assuntoDataGridViewTextBoxColumn.Width = 130;
-            // 
-            // dataDataGridViewTextBoxColumn
-            // 
-            this.dataDataGridViewTextBoxColumn.DataPropertyName = "Data";
-            this.dataDataGridViewTextBoxColumn.HeaderText = "Data";
-            this.dataDataGridViewTextBoxColumn.Name = "dataDataGridViewTextBoxColumn";
-            this.dataDataGridViewTextBoxColumn.ReadOnly = true;
-            this.dataDataGridViewTextBoxColumn.Width = 80;
-            // 
-            // horaInicioDataGridViewTextBoxColumn
-            // 
-            this.horaInicioDataGridViewTextBoxColumn.DataPropertyName = "HoraInicio";
-            this.horaInicioDataGridViewTextBoxColumn.HeaderText = "HoraInicio";
-            this.horaInicioDataGridViewTextBoxColumn.Name = "horaInicioDataGridViewTextBoxColumn";
-            this.horaInicioDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horaInicioDataGridViewTextBoxColumn.Width = 65;
-            // 
-            // horaTerminoDataGridViewTextBoxColumn
-            // 
-            this.horaTerminoDataGridViewTextBoxColumn.DataPropertyName = "HoraTermino";
-            this.horaTerminoDataGridViewTextBoxColumn.HeaderText = "HoraTermino";
-            this.horaTerminoDataGridViewTextBoxColumn.Name = "horaTerminoDataGridViewTextBoxColumn";
-            this.horaTerminoDataGridViewTextBoxColumn.ReadOnly = true;
-            this.horaTerminoDataGridViewTextBoxColumn.Width = 75;
-            // 
-            // contatoDataGridViewTextBoxColumn
-            // 
-            this.contatoDataGridViewTextBoxColumn.DataPropertyName = "Contato";
-            this.contatoDataGridViewTextBoxColumn.HeaderText = "Contato";
-            this.contatoDataGridViewTextBoxColumn.Name = "contatoDataGridViewTextBoxColumn";
-            this.contatoDataGridViewTextBoxColumn.ReadOnly = true;
+            this.stsCompromisso.Name = "stsCompromisso";
+            this.stsCompromisso.Size = new System.Drawing.Size(0, 17);
             // 
             // FormCompromisso
             // 
@@ -319,6 +329,8 @@ namespace eAgenda.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dtsCompromisso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbCompromisso)).EndInit();
             this.gbxConfiguracoes.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -352,5 +364,6 @@ namespace eAgenda.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn horaInicioDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn horaTerminoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn contatoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripStatusLabel stsCompromisso;
     }
 }

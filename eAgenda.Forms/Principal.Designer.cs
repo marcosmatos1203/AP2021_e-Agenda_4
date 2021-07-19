@@ -64,9 +64,11 @@ namespace eAgenda.Forms
             this.dataColumn16 = new System.Data.DataColumn();
             this.dataColumn17 = new System.Data.DataColumn();
             this.dataColumn18 = new System.Data.DataColumn();
+            this.stsPrincipal = new System.Windows.Forms.ToolStripStatusLabel();
             this.groupBox1.SuspendLayout();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtsContato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtsTarefa)).BeginInit();
@@ -201,6 +203,8 @@ namespace eAgenda.Forms
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stsPrincipal});
             this.statusStrip1.Location = new System.Drawing.Point(0, 427);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
@@ -325,6 +329,11 @@ namespace eAgenda.Forms
             this.dataColumn18.Caption = "Hora Inicial";
             this.dataColumn18.ColumnName = "HoraInicio";
             // 
+            // stsPrincipal
+            // 
+            this.stsPrincipal.Name = "stsPrincipal";
+            this.stsPrincipal.Size = new System.Drawing.Size(0, 17);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -341,6 +350,8 @@ namespace eAgenda.Forms
             this.groupBox1.ResumeLayout(false);
             this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrincipal)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtsContato)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContato)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtsTarefa)).EndInit();
@@ -389,6 +400,7 @@ namespace eAgenda.Forms
         private System.Data.DataColumn dataColumn16;
         private System.Data.DataColumn dataColumn17;
         private System.Data.DataColumn dataColumn18;
+        private System.Windows.Forms.ToolStripStatusLabel stsPrincipal;
     }
 }
 

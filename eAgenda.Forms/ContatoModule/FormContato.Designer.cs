@@ -30,12 +30,21 @@ namespace eAgenda.Forms
         private void InitializeComponent()
         {
             this.gbxLista = new System.Windows.Forms.GroupBox();
+            this.btnAgruparPorId = new System.Windows.Forms.Button();
+            this.btnAgruparPorNome = new System.Windows.Forms.Button();
+            this.dgvContato = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.empresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtsContato = new System.Data.DataSet();
             this.tbContato = new System.Data.DataTable();
             this.dataColumn1 = new System.Data.DataColumn();
             this.dataColumn2 = new System.Data.DataColumn();
             this.dataColumn3 = new System.Data.DataColumn();
             this.dataColumn4 = new System.Data.DataColumn();
+            this.dataColumn5 = new System.Data.DataColumn();
             this.btnAgruparPorCargo = new System.Windows.Forms.Button();
             this.gbxConfiguracoes = new System.Windows.Forms.GroupBox();
             this.btnConfiguracoes = new System.Windows.Forms.Button();
@@ -44,20 +53,13 @@ namespace eAgenda.Forms
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.dataColumn5 = new System.Data.DataColumn();
-            this.dgvContato = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cargoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.empresaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnAgruparPorNome = new System.Windows.Forms.Button();
-            this.btnAgruparPorId = new System.Windows.Forms.Button();
+            this.stsContato = new System.Windows.Forms.ToolStripStatusLabel();
             this.gbxLista.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtsContato)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContato)).BeginInit();
             this.gbxConfiguracoes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).BeginInit();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxLista
@@ -75,132 +77,27 @@ namespace eAgenda.Forms
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Listas de Contatos";
             // 
-            // dtsContato
+            // btnAgruparPorId
             // 
-            this.dtsContato.DataSetName = "NewDataSet";
-            this.dtsContato.Tables.AddRange(new System.Data.DataTable[] {
-            this.tbContato});
+            this.btnAgruparPorId.Location = new System.Drawing.Point(29, 285);
+            this.btnAgruparPorId.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgruparPorId.Name = "btnAgruparPorId";
+            this.btnAgruparPorId.Size = new System.Drawing.Size(148, 34);
+            this.btnAgruparPorId.TabIndex = 12;
+            this.btnAgruparPorId.Text = "Listar por Id";
+            this.btnAgruparPorId.UseVisualStyleBackColor = true;
+            this.btnAgruparPorId.Click += new System.EventHandler(this.btnAgruparPorId_Click);
             // 
-            // tbContato
+            // btnAgruparPorNome
             // 
-            this.tbContato.Columns.AddRange(new System.Data.DataColumn[] {
-            this.dataColumn1,
-            this.dataColumn2,
-            this.dataColumn3,
-            this.dataColumn4,
-            this.dataColumn5});
-            this.tbContato.TableName = "tbContato";
-            // 
-            // dataColumn1
-            // 
-            this.dataColumn1.ColumnName = "Id";
-            // 
-            // dataColumn2
-            // 
-            this.dataColumn2.ColumnName = "Nome";
-            // 
-            // dataColumn3
-            // 
-            this.dataColumn3.ColumnName = "Telefone";
-            // 
-            // dataColumn4
-            // 
-            this.dataColumn4.ColumnName = "Cargo";
-            // 
-            // btnAgruparPorCargo
-            // 
-            this.btnAgruparPorCargo.Location = new System.Drawing.Point(376, 285);
-            this.btnAgruparPorCargo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgruparPorCargo.Name = "btnAgruparPorCargo";
-            this.btnAgruparPorCargo.Size = new System.Drawing.Size(148, 34);
-            this.btnAgruparPorCargo.TabIndex = 5;
-            this.btnAgruparPorCargo.Text = "Agrupar por cargo";
-            this.btnAgruparPorCargo.UseVisualStyleBackColor = true;
-            this.btnAgruparPorCargo.Click += new System.EventHandler(this.btnAgrupar_Click);
-            // 
-            // gbxConfiguracoes
-            // 
-            this.gbxConfiguracoes.Controls.Add(this.btnConfiguracoes);
-            this.gbxConfiguracoes.Controls.Add(this.btnCancelar);
-            this.gbxConfiguracoes.Controls.Add(this.btnNovo);
-            this.gbxConfiguracoes.Controls.Add(this.btnExcluir);
-            this.gbxConfiguracoes.Controls.Add(this.btnEditar);
-            this.gbxConfiguracoes.Location = new System.Drawing.Point(20, 21);
-            this.gbxConfiguracoes.Margin = new System.Windows.Forms.Padding(2);
-            this.gbxConfiguracoes.Name = "gbxConfiguracoes";
-            this.gbxConfiguracoes.Padding = new System.Windows.Forms.Padding(2);
-            this.gbxConfiguracoes.Size = new System.Drawing.Size(132, 342);
-            this.gbxConfiguracoes.TabIndex = 8;
-            this.gbxConfiguracoes.TabStop = false;
-            this.gbxConfiguracoes.Text = "Settings";
-            // 
-            // btnConfiguracoes
-            // 
-            this.btnConfiguracoes.Location = new System.Drawing.Point(11, 190);
-            this.btnConfiguracoes.Margin = new System.Windows.Forms.Padding(2);
-            this.btnConfiguracoes.Name = "btnConfiguracoes";
-            this.btnConfiguracoes.Size = new System.Drawing.Size(106, 34);
-            this.btnConfiguracoes.TabIndex = 4;
-            this.btnConfiguracoes.Text = "Configurações";
-            this.btnConfiguracoes.UseVisualStyleBackColor = true;
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(11, 151);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(106, 34);
-            this.btnCancelar.TabIndex = 3;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
-            // 
-            // btnNovo
-            // 
-            this.btnNovo.Location = new System.Drawing.Point(11, 34);
-            this.btnNovo.Margin = new System.Windows.Forms.Padding(2);
-            this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(106, 34);
-            this.btnNovo.TabIndex = 0;
-            this.btnNovo.Text = "Novo";
-            this.btnNovo.UseVisualStyleBackColor = true;
-            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // btnExcluir
-            // 
-            this.btnExcluir.Location = new System.Drawing.Point(11, 112);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(106, 34);
-            this.btnExcluir.TabIndex = 2;
-            this.btnExcluir.Text = "excluir";
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(11, 73);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(106, 34);
-            this.btnEditar.TabIndex = 1;
-            this.btnEditar.Text = "Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 427);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(736, 22);
-            this.statusStrip1.TabIndex = 10;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // dataColumn5
-            // 
-            this.dataColumn5.ColumnName = "Empresa";
+            this.btnAgruparPorNome.Location = new System.Drawing.Point(204, 285);
+            this.btnAgruparPorNome.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgruparPorNome.Name = "btnAgruparPorNome";
+            this.btnAgruparPorNome.Size = new System.Drawing.Size(148, 34);
+            this.btnAgruparPorNome.TabIndex = 11;
+            this.btnAgruparPorNome.Text = "Listar por nome";
+            this.btnAgruparPorNome.UseVisualStyleBackColor = true;
+            this.btnAgruparPorNome.Click += new System.EventHandler(this.btnAgruparPorNome_Click);
             // 
             // dgvContato
             // 
@@ -264,27 +161,140 @@ namespace eAgenda.Forms
             this.empresaDataGridViewTextBoxColumn.Name = "empresaDataGridViewTextBoxColumn";
             this.empresaDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // btnAgruparPorNome
+            // dtsContato
             // 
-            this.btnAgruparPorNome.Location = new System.Drawing.Point(204, 285);
-            this.btnAgruparPorNome.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgruparPorNome.Name = "btnAgruparPorNome";
-            this.btnAgruparPorNome.Size = new System.Drawing.Size(148, 34);
-            this.btnAgruparPorNome.TabIndex = 11;
-            this.btnAgruparPorNome.Text = "Agrupar por nome";
-            this.btnAgruparPorNome.UseVisualStyleBackColor = true;
-            this.btnAgruparPorNome.Click += new System.EventHandler(this.btnAgruparPorNome_Click);
+            this.dtsContato.DataSetName = "NewDataSet";
+            this.dtsContato.Tables.AddRange(new System.Data.DataTable[] {
+            this.tbContato});
             // 
-            // btnAgruparPorId
+            // tbContato
             // 
-            this.btnAgruparPorId.Location = new System.Drawing.Point(29, 285);
-            this.btnAgruparPorId.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAgruparPorId.Name = "btnAgruparPorId";
-            this.btnAgruparPorId.Size = new System.Drawing.Size(148, 34);
-            this.btnAgruparPorId.TabIndex = 12;
-            this.btnAgruparPorId.Text = "Agrupar por Id";
-            this.btnAgruparPorId.UseVisualStyleBackColor = true;
-            this.btnAgruparPorId.Click += new System.EventHandler(this.btnAgruparPorId_Click);
+            this.tbContato.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn1,
+            this.dataColumn2,
+            this.dataColumn3,
+            this.dataColumn4,
+            this.dataColumn5});
+            this.tbContato.TableName = "tbContato";
+            // 
+            // dataColumn1
+            // 
+            this.dataColumn1.ColumnName = "Id";
+            // 
+            // dataColumn2
+            // 
+            this.dataColumn2.ColumnName = "Nome";
+            // 
+            // dataColumn3
+            // 
+            this.dataColumn3.ColumnName = "Telefone";
+            // 
+            // dataColumn4
+            // 
+            this.dataColumn4.ColumnName = "Cargo";
+            // 
+            // dataColumn5
+            // 
+            this.dataColumn5.ColumnName = "Empresa";
+            // 
+            // btnAgruparPorCargo
+            // 
+            this.btnAgruparPorCargo.Location = new System.Drawing.Point(376, 285);
+            this.btnAgruparPorCargo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAgruparPorCargo.Name = "btnAgruparPorCargo";
+            this.btnAgruparPorCargo.Size = new System.Drawing.Size(148, 34);
+            this.btnAgruparPorCargo.TabIndex = 5;
+            this.btnAgruparPorCargo.Text = "Listar por cargo";
+            this.btnAgruparPorCargo.UseVisualStyleBackColor = true;
+            this.btnAgruparPorCargo.Click += new System.EventHandler(this.btnAgrupar_Click);
+            // 
+            // gbxConfiguracoes
+            // 
+            this.gbxConfiguracoes.Controls.Add(this.btnConfiguracoes);
+            this.gbxConfiguracoes.Controls.Add(this.btnCancelar);
+            this.gbxConfiguracoes.Controls.Add(this.btnNovo);
+            this.gbxConfiguracoes.Controls.Add(this.btnExcluir);
+            this.gbxConfiguracoes.Controls.Add(this.btnEditar);
+            this.gbxConfiguracoes.Location = new System.Drawing.Point(20, 21);
+            this.gbxConfiguracoes.Margin = new System.Windows.Forms.Padding(2);
+            this.gbxConfiguracoes.Name = "gbxConfiguracoes";
+            this.gbxConfiguracoes.Padding = new System.Windows.Forms.Padding(2);
+            this.gbxConfiguracoes.Size = new System.Drawing.Size(132, 342);
+            this.gbxConfiguracoes.TabIndex = 8;
+            this.gbxConfiguracoes.TabStop = false;
+            this.gbxConfiguracoes.Text = "Settings";
+            // 
+            // btnConfiguracoes
+            // 
+            this.btnConfiguracoes.Location = new System.Drawing.Point(11, 190);
+            this.btnConfiguracoes.Margin = new System.Windows.Forms.Padding(2);
+            this.btnConfiguracoes.Name = "btnConfiguracoes";
+            this.btnConfiguracoes.Size = new System.Drawing.Size(106, 34);
+            this.btnConfiguracoes.TabIndex = 4;
+            this.btnConfiguracoes.Text = "Configurações";
+            this.btnConfiguracoes.UseVisualStyleBackColor = true;
+            this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Location = new System.Drawing.Point(11, 151);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(106, 34);
+            this.btnCancelar.TabIndex = 3;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.Location = new System.Drawing.Point(11, 34);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(106, 34);
+            this.btnNovo.TabIndex = 0;
+            this.btnNovo.Text = "Novo";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Location = new System.Drawing.Point(11, 112);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(106, 34);
+            this.btnExcluir.TabIndex = 2;
+            this.btnExcluir.Text = "excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(11, 73);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(106, 34);
+            this.btnEditar.TabIndex = 1;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stsContato});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 427);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(736, 22);
+            this.statusStrip1.TabIndex = 10;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // stsContato
+            // 
+            this.stsContato.Name = "stsContato";
+            this.stsContato.Size = new System.Drawing.Size(0, 17);
             // 
             // FormContato
             // 
@@ -300,10 +310,12 @@ namespace eAgenda.Forms
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Contato";
             this.gbxLista.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtsContato)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbContato)).EndInit();
             this.gbxConfiguracoes.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvContato)).EndInit();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -335,5 +347,6 @@ namespace eAgenda.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn empresaDataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnAgruparPorNome;
         private System.Windows.Forms.Button btnAgruparPorId;
+        private System.Windows.Forms.ToolStripStatusLabel stsContato;
     }
 }

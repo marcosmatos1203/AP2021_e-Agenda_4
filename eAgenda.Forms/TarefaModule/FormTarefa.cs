@@ -48,6 +48,7 @@ namespace eAgenda.Forms
             controladorTarefa.Excluir(tarefa.Id);
             dtsTarefa.Clear();
             CarregarTarefasPendentes();
+            stsTarefa.Text = "Tarefa Excluída!";
         }
         #endregion
 
@@ -93,5 +94,10 @@ namespace eAgenda.Forms
             }
         }
         #endregion
+
+        private void btnConfiguracoes_Click(object sender, EventArgs e)
+        {
+            stsTarefa.Text = "Em construção, Aguardem...";
+        }
     }
 }

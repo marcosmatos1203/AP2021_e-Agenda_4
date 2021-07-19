@@ -44,8 +44,10 @@ namespace eAgenda.Forms.ContatoModule
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.stsContato = new System.Windows.Forms.ToolStripStatusLabel();
             this.gbxLista.SuspendLayout();
             this.gbxConfiguracoes.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxLista
@@ -62,9 +64,9 @@ namespace eAgenda.Forms.ContatoModule
             this.gbxLista.Controls.Add(this.txtNome);
             this.gbxLista.Enabled = false;
             this.gbxLista.Location = new System.Drawing.Point(170, 21);
-            this.gbxLista.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxLista.Margin = new System.Windows.Forms.Padding(2);
             this.gbxLista.Name = "gbxLista";
-            this.gbxLista.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxLista.Padding = new System.Windows.Forms.Padding(2);
             this.gbxLista.Size = new System.Drawing.Size(394, 342);
             this.gbxLista.TabIndex = 9;
             this.gbxLista.TabStop = false;
@@ -83,7 +85,7 @@ namespace eAgenda.Forms.ContatoModule
             // txtEmpresa
             // 
             this.txtEmpresa.Location = new System.Drawing.Point(92, 202);
-            this.txtEmpresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmpresa.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmpresa.Name = "txtEmpresa";
             this.txtEmpresa.Size = new System.Drawing.Size(277, 20);
             this.txtEmpresa.TabIndex = 8;
@@ -101,7 +103,7 @@ namespace eAgenda.Forms.ContatoModule
             // txtCargo
             // 
             this.txtCargo.Location = new System.Drawing.Point(92, 158);
-            this.txtCargo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCargo.Margin = new System.Windows.Forms.Padding(2);
             this.txtCargo.Name = "txtCargo";
             this.txtCargo.Size = new System.Drawing.Size(277, 20);
             this.txtCargo.TabIndex = 6;
@@ -119,7 +121,7 @@ namespace eAgenda.Forms.ContatoModule
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(92, 116);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(277, 20);
             this.txtTelefone.TabIndex = 4;
@@ -137,7 +139,7 @@ namespace eAgenda.Forms.ContatoModule
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(92, 71);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(277, 20);
             this.txtEmail.TabIndex = 2;
@@ -155,7 +157,7 @@ namespace eAgenda.Forms.ContatoModule
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(92, 29);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(277, 20);
             this.txtNome.TabIndex = 0;
@@ -165,9 +167,9 @@ namespace eAgenda.Forms.ContatoModule
             this.gbxConfiguracoes.Controls.Add(this.btnSalvar);
             this.gbxConfiguracoes.Controls.Add(this.btnCancelar);
             this.gbxConfiguracoes.Location = new System.Drawing.Point(20, 21);
-            this.gbxConfiguracoes.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxConfiguracoes.Margin = new System.Windows.Forms.Padding(2);
             this.gbxConfiguracoes.Name = "gbxConfiguracoes";
-            this.gbxConfiguracoes.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gbxConfiguracoes.Padding = new System.Windows.Forms.Padding(2);
             this.gbxConfiguracoes.Size = new System.Drawing.Size(132, 342);
             this.gbxConfiguracoes.TabIndex = 8;
             this.gbxConfiguracoes.TabStop = false;
@@ -176,7 +178,7 @@ namespace eAgenda.Forms.ContatoModule
             // btnSalvar
             // 
             this.btnSalvar.Location = new System.Drawing.Point(11, 34);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(106, 34);
             this.btnSalvar.TabIndex = 0;
@@ -187,7 +189,7 @@ namespace eAgenda.Forms.ContatoModule
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(11, 73);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(106, 34);
             this.btnCancelar.TabIndex = 1;
@@ -198,12 +200,19 @@ namespace eAgenda.Forms.ContatoModule
             // statusStrip1
             // 
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stsContato});
             this.statusStrip1.Location = new System.Drawing.Point(0, 427);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
             this.statusStrip1.Size = new System.Drawing.Size(586, 22);
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // stsContato
+            // 
+            this.stsContato.Name = "stsContato";
+            this.stsContato.Size = new System.Drawing.Size(0, 17);
             // 
             // AtualizarContato
             // 
@@ -213,7 +222,7 @@ namespace eAgenda.Forms.ContatoModule
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.gbxLista);
             this.Controls.Add(this.gbxConfiguracoes);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "AtualizarContato";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -221,6 +230,8 @@ namespace eAgenda.Forms.ContatoModule
             this.gbxLista.ResumeLayout(false);
             this.gbxLista.PerformLayout();
             this.gbxConfiguracoes.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -243,5 +254,6 @@ namespace eAgenda.Forms.ContatoModule
         private System.Windows.Forms.TextBox txtCargo;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtTelefone;
+        private System.Windows.Forms.ToolStripStatusLabel stsContato;
     }
 }

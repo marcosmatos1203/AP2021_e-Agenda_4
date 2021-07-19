@@ -84,15 +84,11 @@ namespace eAgenda.Forms.TarefaModule
             if (resultadoValidacao == "ESTA_VALIDO")
             {
                 this.Close();
-
-                // ApresentarMensagem(MensagemDeInsercaoC
-                // Mensagem.Sucesso);
             }
 
             else
             {
-                //ApresentarMensagem(resultadoValidacao, TipoMensagem.Erro);
-                //InserirNovoRegistro();
+                stsTarefa.Text = "Falha ao salvar tarefa. Tente novamente";
             }
         }
         private void EditarTarefa()

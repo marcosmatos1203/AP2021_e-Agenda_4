@@ -46,7 +46,6 @@ namespace eAgenda.Forms.CompromissoModule
 
             if (resultadoValidacao == "ESTA_VALIDO")
             {
-                //ApresentarMensagem(MensagemDeEdicaoComSucesso(), TipoMensagem.Sucesso); 
                 this.Close();
             }
             else
@@ -115,13 +114,11 @@ namespace eAgenda.Forms.CompromissoModule
             string resultadoValidacao = controladorCompromisso.InserirNovo(compromisso);
             if (resultadoValidacao == "ESTA_VALIDO")
             {
-                //ApresentarMensagem(MensagemDeInsercaoComSucesso(), TipoMensagem.Sucesso);
                 this.Close();
             }
             else
             {
-                //ApresentarMensagem(resultadoValidacao, TipoMensagem.Erro);
-                //InserirNovoRegistro();
+                stsCompromisso.Text = "Falha ao salvar compromisso, revisse os dados";
             }
         }
         private void CarregaComboBox()

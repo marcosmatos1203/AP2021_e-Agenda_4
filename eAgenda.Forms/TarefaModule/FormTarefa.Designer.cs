@@ -54,11 +54,13 @@ namespace eAgenda.Forms
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.stsTarefa = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTarefa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtsTarefa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTarefa)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.stsTarefa.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxLista
@@ -104,6 +106,7 @@ namespace eAgenda.Forms
             this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
             this.idDataGridViewTextBoxColumn.HeaderText = "Id";
             this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
             this.idDataGridViewTextBoxColumn.Width = 40;
             // 
             // tituloDataGridViewTextBoxColumn
@@ -111,6 +114,7 @@ namespace eAgenda.Forms
             this.tituloDataGridViewTextBoxColumn.DataPropertyName = "Titulo";
             this.tituloDataGridViewTextBoxColumn.HeaderText = "Titulo";
             this.tituloDataGridViewTextBoxColumn.Name = "tituloDataGridViewTextBoxColumn";
+            this.tituloDataGridViewTextBoxColumn.ReadOnly = true;
             this.tituloDataGridViewTextBoxColumn.Width = 120;
             // 
             // dataCriacaoDataGridViewTextBoxColumn
@@ -118,6 +122,7 @@ namespace eAgenda.Forms
             this.dataCriacaoDataGridViewTextBoxColumn.DataPropertyName = "DataCriacao";
             this.dataCriacaoDataGridViewTextBoxColumn.HeaderText = "DataCriacao";
             this.dataCriacaoDataGridViewTextBoxColumn.Name = "dataCriacaoDataGridViewTextBoxColumn";
+            this.dataCriacaoDataGridViewTextBoxColumn.ReadOnly = true;
             this.dataCriacaoDataGridViewTextBoxColumn.Width = 80;
             // 
             // prioridadeDataGridViewTextBoxColumn
@@ -125,6 +130,7 @@ namespace eAgenda.Forms
             this.prioridadeDataGridViewTextBoxColumn.DataPropertyName = "Prioridade";
             this.prioridadeDataGridViewTextBoxColumn.HeaderText = "Prioridade";
             this.prioridadeDataGridViewTextBoxColumn.Name = "prioridadeDataGridViewTextBoxColumn";
+            this.prioridadeDataGridViewTextBoxColumn.ReadOnly = true;
             this.prioridadeDataGridViewTextBoxColumn.Width = 95;
             // 
             // percentualDataGridViewTextBoxColumn
@@ -132,6 +138,7 @@ namespace eAgenda.Forms
             this.percentualDataGridViewTextBoxColumn.DataPropertyName = "Percentual";
             this.percentualDataGridViewTextBoxColumn.HeaderText = "Percentual";
             this.percentualDataGridViewTextBoxColumn.Name = "percentualDataGridViewTextBoxColumn";
+            this.percentualDataGridViewTextBoxColumn.ReadOnly = true;
             this.percentualDataGridViewTextBoxColumn.Width = 60;
             // 
             // dataConclusaoDataGridViewTextBoxColumn
@@ -139,6 +146,7 @@ namespace eAgenda.Forms
             this.dataConclusaoDataGridViewTextBoxColumn.DataPropertyName = "DataConclusao";
             this.dataConclusaoDataGridViewTextBoxColumn.HeaderText = "DataConclusao";
             this.dataConclusaoDataGridViewTextBoxColumn.Name = "dataConclusaoDataGridViewTextBoxColumn";
+            this.dataConclusaoDataGridViewTextBoxColumn.ReadOnly = true;
             this.dataConclusaoDataGridViewTextBoxColumn.Width = 90;
             // 
             // dtsTarefa
@@ -232,6 +240,7 @@ namespace eAgenda.Forms
             this.btnConfiguracoes.TabIndex = 4;
             this.btnConfiguracoes.Text = "Configurações";
             this.btnConfiguracoes.UseVisualStyleBackColor = true;
+            this.btnConfiguracoes.Click += new System.EventHandler(this.btnConfiguracoes_Click);
             // 
             // btnCancelar
             // 
@@ -280,12 +289,19 @@ namespace eAgenda.Forms
             // stsTarefa
             // 
             this.stsTarefa.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.stsTarefa.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
             this.stsTarefa.Location = new System.Drawing.Point(0, 427);
             this.stsTarefa.Name = "stsTarefa";
             this.stsTarefa.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
             this.stsTarefa.Size = new System.Drawing.Size(736, 22);
             this.stsTarefa.TabIndex = 8;
             this.stsTarefa.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 17);
             // 
             // FormTarefa
             // 
@@ -305,6 +321,8 @@ namespace eAgenda.Forms
             ((System.ComponentModel.ISupportInitialize)(this.dtsTarefa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbTarefa)).EndInit();
             this.groupBox1.ResumeLayout(false);
+            this.stsTarefa.ResumeLayout(false);
+            this.stsTarefa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -337,5 +355,6 @@ namespace eAgenda.Forms
         private System.Windows.Forms.DataGridViewTextBoxColumn prioridadeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn percentualDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataConclusaoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
     }
 }

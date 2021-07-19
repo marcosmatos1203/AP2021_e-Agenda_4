@@ -30,6 +30,8 @@ namespace eAgenda.Forms.TarefaModule
         private void InitializeComponent()
         {
             this.gbxLista = new System.Windows.Forms.GroupBox();
+            this.lblDataConclusao = new System.Windows.Forms.Label();
+            this.lblDataAbertura = new System.Windows.Forms.Label();
             this.dtpDataConclusao = new System.Windows.Forms.DateTimePicker();
             this.dtpDataAbertura = new System.Windows.Forms.DateTimePicker();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -43,12 +45,12 @@ namespace eAgenda.Forms.TarefaModule
             this.gbxConfiguracoes = new System.Windows.Forms.GroupBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.lblDataAbertura = new System.Windows.Forms.Label();
-            this.lblDataConclusao = new System.Windows.Forms.Label();
+            this.stsTarefa = new System.Windows.Forms.StatusStrip();
+            this.sts = new System.Windows.Forms.ToolStripStatusLabel();
             this.gbxLista.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.gbxConfiguracoes.SuspendLayout();
+            this.stsTarefa.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbxLista
@@ -71,6 +73,24 @@ namespace eAgenda.Forms.TarefaModule
             this.gbxLista.TabIndex = 9;
             this.gbxLista.TabStop = false;
             this.gbxLista.Text = "Dados da Tarefa";
+            // 
+            // lblDataConclusao
+            // 
+            this.lblDataConclusao.AutoSize = true;
+            this.lblDataConclusao.Location = new System.Drawing.Point(26, 299);
+            this.lblDataConclusao.Name = "lblDataConclusao";
+            this.lblDataConclusao.Size = new System.Drawing.Size(101, 13);
+            this.lblDataConclusao.TabIndex = 24;
+            this.lblDataConclusao.Text = "Data de Conclusão:";
+            // 
+            // lblDataAbertura
+            // 
+            this.lblDataAbertura.AutoSize = true;
+            this.lblDataAbertura.Location = new System.Drawing.Point(26, 84);
+            this.lblDataAbertura.Name = "lblDataAbertura";
+            this.lblDataAbertura.Size = new System.Drawing.Size(91, 13);
+            this.lblDataAbertura.TabIndex = 23;
+            this.lblDataAbertura.Text = "Data de Abertura:";
             // 
             // dtpDataConclusao
             // 
@@ -210,40 +230,29 @@ namespace eAgenda.Forms.TarefaModule
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // statusStrip1
+            // stsTarefa
             // 
-            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.statusStrip1.Location = new System.Drawing.Point(0, 427);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(586, 22);
-            this.statusStrip1.TabIndex = 10;
-            this.statusStrip1.Text = "statusStrip1";
+            this.stsTarefa.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.stsTarefa.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sts});
+            this.stsTarefa.Location = new System.Drawing.Point(0, 427);
+            this.stsTarefa.Name = "stsTarefa";
+            this.stsTarefa.Padding = new System.Windows.Forms.Padding(1, 0, 10, 0);
+            this.stsTarefa.Size = new System.Drawing.Size(586, 22);
+            this.stsTarefa.TabIndex = 10;
+            this.stsTarefa.Text = "statusStrip1";
             // 
-            // lblDataAbertura
+            // sts
             // 
-            this.lblDataAbertura.AutoSize = true;
-            this.lblDataAbertura.Location = new System.Drawing.Point(26, 84);
-            this.lblDataAbertura.Name = "lblDataAbertura";
-            this.lblDataAbertura.Size = new System.Drawing.Size(91, 13);
-            this.lblDataAbertura.TabIndex = 23;
-            this.lblDataAbertura.Text = "Data de Abertura:";
-            // 
-            // lblDataConclusao
-            // 
-            this.lblDataConclusao.AutoSize = true;
-            this.lblDataConclusao.Location = new System.Drawing.Point(26, 299);
-            this.lblDataConclusao.Name = "lblDataConclusao";
-            this.lblDataConclusao.Size = new System.Drawing.Size(101, 13);
-            this.lblDataConclusao.TabIndex = 24;
-            this.lblDataConclusao.Text = "Data de Conclusão:";
+            this.sts.Name = "sts";
+            this.sts.Size = new System.Drawing.Size(0, 17);
             // 
             // AtualizarTarefa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(586, 449);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.stsTarefa);
             this.Controls.Add(this.gbxLista);
             this.Controls.Add(this.gbxConfiguracoes);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -256,6 +265,8 @@ namespace eAgenda.Forms.TarefaModule
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gbxConfiguracoes.ResumeLayout(false);
+            this.stsTarefa.ResumeLayout(false);
+            this.stsTarefa.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,7 +278,7 @@ namespace eAgenda.Forms.TarefaModule
         private System.Windows.Forms.GroupBox gbxConfiguracoes;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip stsTarefa;
         private System.Windows.Forms.Label lblPercentual;
         private System.Windows.Forms.TextBox txtPercentual;
         private System.Windows.Forms.Label lblTitulo;
@@ -280,5 +291,6 @@ namespace eAgenda.Forms.TarefaModule
         private System.Windows.Forms.DateTimePicker dtpDataAbertura;
         private System.Windows.Forms.Label lblDataConclusao;
         private System.Windows.Forms.Label lblDataAbertura;
+        private System.Windows.Forms.ToolStripStatusLabel sts;
     }
 }

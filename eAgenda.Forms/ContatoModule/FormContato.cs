@@ -52,6 +52,7 @@ namespace eAgenda.Forms
             controladorContato.Excluir(contato.Id);
             dtsContato.Clear();
             CarregarContatosPorNome();
+            stsContato.Text = "Contato Excluído";
         }
         #endregion
 
@@ -103,5 +104,10 @@ namespace eAgenda.Forms
             CarregarGrid(contatos);
         }
         #endregion
+
+        private void btnConfiguracoes_Click(object sender, EventArgs e)
+        {
+            stsContato.Text = "Em construção, Aguardem...";
+        }
     }
 }

@@ -80,15 +80,11 @@ namespace eAgenda.Forms.ContatoModule
             if (resultadoValidacao == "ESTA_VALIDO")
             {
                 this.Close();
-
-                // ApresentarMensagem(MensagemDeInsercaoC
-                // Mensagem.Sucesso);
             }
 
             else
             {
-                //ApresentarMensagem(resultadoValidacao, TipoMensagem.Erro);
-                //InserirNovoRegistro();
+                stsContato.Text = "Falha ao salvar o contato, revise os dados";
             }
         }
       

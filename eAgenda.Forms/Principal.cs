@@ -35,17 +35,20 @@ namespace eAgenda.Forms
         {
             atualizaBotoesContato();
             CarregarContatos();
+            stsPrincipal.Text = "Previa dos Contatos...";
         }
 
         private void btnTarefa_Click(object sender, EventArgs e)
         {
             atualizaBotoesTarefa();
             CarregarTarefas();
+            stsPrincipal.Text = "Previa das Tarefas...";
         }
         private void btnCompromisso_Click(object sender, EventArgs e)
         {
             atualizaBotoesCompromisso();
             CarregarCompromissos();
+            stsPrincipal.Text = "Previa dos Compromissos...";
         }
         private void btnConfiguracao_Click(object sender, EventArgs e)
         {
