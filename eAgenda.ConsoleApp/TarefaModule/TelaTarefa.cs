@@ -15,7 +15,6 @@ namespace eAgenda.ConsoleApp.TarefaModule
         {
             this.controladorTarefa = controladorTarefa;
         }
-
         public override void EditarRegistro()
         {
             ConfigurarTela(SubtituloDeEdicao());
